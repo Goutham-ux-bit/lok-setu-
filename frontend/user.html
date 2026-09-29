@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — LOK SETU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">L</span>
+      <span class="brand-word">LOK SETU</span>
+    </a>
+    <nav class="nav-actions">
+      <div class="nav-links">
+        <a href="user.html" class="active">Dashboard</a>
+        <a href="public-reports.html">Public Reports</a>
+      </div>
+      <a href="login.html" data-login-link class="btn btn-outline">Log in</a>
+      <a href="user.html" class="avatar" data-avatar style="display:none"></a>
+      <a href="#" data-logout class="btn btn-outline" style="display:none">Log out</a>
+      <a href="mailto:hello@loksetu.example" class="btn btn-saffron">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="tag">🌍 LOK SETU</div>
+      <h2>Let's fix the city together</h2>
+      <a href="report.html" class="btn btn-primary btn-block">Report an Issue</a>
+    </div>
+    <div class="sidebar-section">
+      <h3>Quick Report Categories</h3>
+      <div class="cat-grid" id="quick-cats"><!-- populated by js/dashboard.js --></div>
+    </div>
+    <div class="sidebar-section">
+      <h3>Reports Received</h3>
+      <div class="stat-row" id="sidebar-stats">
+        <div class="stat"><b>0</b><span>Total Reports</span></div>
+        <div class="stat pending"><b>0</b><span>Pending</span></div>
+        <div class="stat resolved"><b>0</b><span>Resolved</span></div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <h3>Community Engagement</h3>
+      <a href="https://www.india.gov.in/" target="_blank" rel="noopener" class="engage-card">
+        <div class="title">👥 Join the government camp</div>
+        <div class="desc">Help improve your local community.</div>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <div class="panel">
+      <div class="panel-head" style="margin-bottom:2px;">
+        <div>
+          <p class="greeting">Hello,</p>
+          <p class="greeting-name" data-user-name>Guest User</p>
+        </div>
+        <span class="avatar" data-avatar-main>G</span>
+      </div>
+
+      <a href="report.html" class="action-card">
+        <span class="ic">📝</span>
+        <span>
+          <span class="t" style="display:block;">Report Issue</span>
+          <span class="d">Submit a new complaint or civic issue.</span>
+        </span>
+      </a>
+
+      <p class="section-label">Your Impact</p>
+      <div class="impact-row" id="impact-stats">
+        <div class="stat"><b>0</b><span>Reported</span></div>
+        <div class="stat resolved"><b>0</b><span>Resolved</span></div>
+        <div class="stat pending"><b>0</b><span>Pending</span></div>
+      </div>
+
+      <p class="section-label">Your Recent Issues</p>
+      <div id="recent-issues">
+        <div class="empty-state">
+          <p>You haven't uploaded any issues yet.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="report.html" class="btn btn-primary btn-lg">Report Now</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<p class="footer-note">LOK SETU — a bridge between citizens and their local body.</p>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

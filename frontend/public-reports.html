@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Public Reports — LOK SETU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">L</span>
+      <span class="brand-word">LOK SETU</span>
+    </a>
+    <nav class="nav-actions">
+      <div class="nav-links">
+        <a href="user.html">Dashboard</a>
+        <a href="public-reports.html" class="active">Public Reports</a>
+      </div>
+      <a href="login.html" data-login-link class="btn btn-outline">Log in</a>
+      <a href="user.html" class="avatar" data-avatar style="display:none"></a>
+      <a href="#" data-logout class="btn btn-outline" style="display:none">Log out</a>
+      <a href="mailto:hello@loksetu.example" class="btn btn-saffron">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<div class="app-shell" style="grid-template-columns: 1fr; max-width: 720px;">
+  <main>
+    <div class="panel">
+      <div class="panel-head">
+        <a href="user.html" class="back-link">← Back</a>
+        <h2>All Public Reports</h2>
+        <span></span>
+      </div>
+
+      <div class="filter-row" id="filter-row">
+        <button class="chip-toggle active" data-status="">All</button>
+        <button class="chip-toggle" data-status="pending">Pending</button>
+        <button class="chip-toggle" data-status="in_progress">In progress</button>
+        <button class="chip-toggle" data-status="resolved">Resolved</button>
+      </div>
+
+      <div id="report-list">
+        <div class="empty-state">
+          <div class="big">00</div>
+          <p>No public reports found yet</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<p class="footer-note">LOK SETU — a bridge between citizens and their local body.</p>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/public-reports.js"></script>
+</body>
+</html>

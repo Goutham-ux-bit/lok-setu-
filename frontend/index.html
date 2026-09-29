@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOK SETU — Report civic issues</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">L</span>
+      <span class="brand-word">LOK SETU</span>
+    </a>
+    <nav class="nav-actions">
+      <div class="nav-links">
+        <a href="user.html">Dashboard</a>
+        <a href="public-reports.html">Public Reports</a>
+      </div>
+      <a href="login.html" data-login-link class="btn btn-outline">Log in</a>
+      <a href="user.html" class="avatar" data-avatar style="display:none"></a>
+      <a href="#" data-logout class="btn btn-outline" style="display:none">Log out</a>
+      <a href="mailto:hello@loksetu.example" class="btn btn-saffron">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>LOK SETU</h1>
+  <p>Report issues. Track progress. Build a better community.</p>
+  <div style="margin-top:24px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="report.html" class="btn btn-primary btn-lg">Report an Issue</a>
+    <a href="public-reports.html" class="btn btn-outline btn-lg">View Public Reports</a>
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 24px 60px;">
+  <p class="section-label" style="text-align:center; margin-bottom:22px;">Six ways to flag what needs fixing</p>
+  <div class="cat-grid" id="landing-cats" style="grid-template-columns: repeat(3, 1fr); max-width:640px; margin:0 auto;">
+    <!-- populated by js/index.js -->
+  </div>
+</section>
+
+<p class="footer-note">LOK SETU — a bridge between citizens and their local body.</p>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

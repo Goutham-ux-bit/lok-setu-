@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report an Issue — LOK SETU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">L</span>
+      <span class="brand-word">LOK SETU</span>
+    </a>
+    <nav class="nav-actions">
+      <div class="nav-links">
+        <a href="user.html">Dashboard</a>
+        <a href="public-reports.html">Public Reports</a>
+      </div>
+      <a href="login.html" data-login-link class="btn btn-outline">Log in</a>
+      <a href="user.html" class="avatar" data-avatar style="display:none"></a>
+      <a href="#" data-logout class="btn btn-outline" style="display:none">Log out</a>
+      <a href="mailto:hello@loksetu.example" class="btn btn-saffron">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<div class="app-shell" style="grid-template-columns: 1fr; max-width: 640px;">
+  <main>
+    <div class="panel">
+      <div class="panel-head">
+        <a href="user.html" class="back-link">← Back</a>
+        <h2>Select Category</h2>
+        <span></span>
+      </div>
+
+      <div id="alert-box"></div>
+
+      <div class="cat-select-list" id="cat-select-list">
+        <!-- populated by js/report.js -->
+      </div>
+
+      <form id="report-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="e.g. Broken streetlight near bus stop" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Add any details that will help the local body act on this"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="e.g. MG Road, near City Bus Stand">
+        </div>
+        <div class="form-group">
+          <label>Photo (optional)</label>
+          <label class="image-drop" id="image-drop" for="image">
+            <span id="image-drop-text">Tap to attach a photo of the issue</span>
+          </label>
+          <input type="file" id="image" accept="image/*" style="display:none">
+        </div>
+        <div class="form-group" style="display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" id="is-public" checked style="width:16px; height:16px;">
+          <label for="is-public" style="margin:0;">Show this report in Public Reports</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">Submit Complaint</button>
+      </form>
+    </div>
+  </main>
+</div>
+
+<p class="footer-note">LOK SETU — a bridge between citizens and their local body.</p>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>
