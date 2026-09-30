@@ -1,25 +1,7 @@
-version: "3.8"
-
 services:
-  loksetu:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile
-    image: lok-setu:latest
-    container_name: lok-setu
-    ports:
-      - "3000:3000"
-    environment:
-      - PORT=3000
-      - NODE_ENV=production
-      - JWT_SECRET=${JWT_SECRET:-please_change_me}
-      - JWT_EXPIRES_IN=${JWT_EXPIRES_IN:-7d}
-      - ADMIN_KEY=${ADMIN_KEY:-please_change_me_too}
-      - DB_PATH=/app/backend/database/loksetu.db
-      - CORS_ORIGIN=${CORS_ORIGIN:-*}
-    volumes:
-      # Keep the SQLite database and uploaded photos on the host so they
-      # survive `docker compose down` / image rebuilds.
-      - ./data/database:/app/backend/database
-      - ./data/uploads:/app/backend/uploads
-    restart: unless-stopped
+  lok-setu:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    ports: ["3000:3000"]
+    environment: {ADMIN_PASSWORD: change-me-now}
+    volumes: ["lokdata:/app/backend/data"]
+volumes: {lokdata: {}}

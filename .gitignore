@@ -1,20 +1,3 @@
-# Dependencies
-node_modules/
-
-# Environment
+node_modules
 .env
-
-# Database & uploads (runtime data, don't commit)
-backend/database/*.db
-backend/database/*.db-journal
-backend/database/*.db-wal
-backend/database/*.db-shm
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# Docker volume data
-data/
-
-# OS / editor
-.DS_Store
-*.log
+backend/data
